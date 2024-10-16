@@ -4,6 +4,15 @@ import Andrey from "./assets/andrey.jpg"
 import Biografia from "./assets/biografia.jpg"
 
 export default function Home() {
+
+  const sendMessage = () => {
+    const phone = "5533998212351";
+    const message = `Oi andrey bonitão`;
+    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+
+    window.open(url, '_blank').focus();
+  }
+
   return (
     <div className="bg-gradient-to-bl from-blue-950 to-blue-900 min-h-screen pb-4">
       <header className="bg-gradient-to-r from-black to-blue-950 shadow-2xl flex py-4 justify-center">
@@ -34,7 +43,7 @@ export default function Home() {
         <div className="w-3/4 flex flex-col gap-4">
           <h1 className="font-italianno text-white text-5xl">Apresentação</h1>
           <iframe height="250" src="https://www.youtube.com/embed/hNKbPqQeLQQ?si=WSO762y3GRf2j6Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />       
-          </div>
+        </div>
 
         <div className="w-3/4 h-96 overflow-scroll bg-[url('assets/biografia.jpg')] bg-cover shadow-md rounded-md">
           <div className="bg-black bg-opacity-60 w-full p-5 flex flex-col gap-2">
@@ -47,6 +56,13 @@ export default function Home() {
           </div>
 
         </div>
+
+        <button className="bg-transparent border-2 border-lime-200 text-lime-200 flex justify-center items-center text-3xl gap-2 px-5 py-2 rounded-lg"
+        onClick={sendMessage}
+        >
+          <FaWhatsapp />
+          Whatsapp
+        </button>
 
       </main>
     </div>
