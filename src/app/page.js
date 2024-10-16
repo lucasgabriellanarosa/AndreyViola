@@ -1,12 +1,12 @@
+'use client'
 import { FaYoutube, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import Andrey from "./assets/andrey.jpg"
-import Biografia from "./assets/biografia.jpg"
 
 export default function Home() {
 
   const sendMessage = () => {
-    const phone = "5533998212351";
+    const phone = "553399957258";
     const message = `Oi andrey bonitão`;
     const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
 
@@ -42,7 +42,7 @@ export default function Home() {
 
         <div className="w-3/4 flex flex-col gap-4">
           <h1 className="font-italianno text-white text-5xl">Apresentação</h1>
-          <iframe height="250" src="https://www.youtube.com/embed/hNKbPqQeLQQ?si=WSO762y3GRf2j6Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />       
+          <iframe height="250" src="https://www.youtube.com/embed/hNKbPqQeLQQ?si=WSO762y3GRf2j6Gw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />       
         </div>
 
         <div className="w-3/4 h-96 overflow-scroll bg-[url('assets/biografia.jpg')] bg-cover shadow-md rounded-md">
